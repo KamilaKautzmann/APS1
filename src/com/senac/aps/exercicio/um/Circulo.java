@@ -1,5 +1,7 @@
 package com.senac.aps.exercicio.um;
 
+import com.senac.SimpleJava.Console;
+
 public class Circulo {
 
 	private final double PI = 3.14;
@@ -19,9 +21,9 @@ public class Circulo {
 		this.posicaoy = py;
 
 		this.pxDireita = raio + px;
-		this.pxEsquerda = raio - px;
+		this.pxEsquerda =  px - raio;
 		this.pyCima = raio + py;
-		this.pyBaixo = raio - py;
+		this.pyBaixo = py - raio;
 	}
 
 	public double circunferencia() {
@@ -37,9 +39,9 @@ public class Circulo {
 		this.posicaoy += 1;
 
 		this.pxDireita = raio + this.posicaox;
-		this.pxEsquerda = raio - this.posicaox;
+		this.pxEsquerda = this.posicaox - raio;
 		this.pyCima = raio + this.posicaoy;
-		this.pyBaixo = raio - this.posicaoy;
+		this.pyBaixo = this.posicaoy - raio;
 	}
 
 	public boolean verificarContato(Circulo circulo) {
